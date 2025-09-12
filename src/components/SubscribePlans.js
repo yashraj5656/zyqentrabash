@@ -64,6 +64,22 @@ export default function SubscribePlans() {
 
   return (
     <div className="hasa" style={{marginRight:"1.7rem"}}>
+            {/* ✅ Loader Overlay */}
+            {loading && (
+        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50">
+          <div className="banter-loader">
+            <div className="banter-loader__box"></div>
+            <div className="banter-loader__box"></div>
+            <div className="banter-loader__box"></div>
+            <div className="banter-loader__box"></div>
+            <div className="banter-loader__box"></div>
+            <div className="banter-loader__box"></div>
+            <div className="banter-loader__box"></div>
+            <div className="banter-loader__box"></div>
+            <div className="banter-loader__box"></div>
+          </div>
+        </div>
+      )}
       <div className="sub-wrapper">
         {plans.map((plan, idx) => (
           <div className="sub-card" key={idx}>
